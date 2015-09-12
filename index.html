@@ -6,6 +6,12 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
   <style type="text/css">
+  body{
+    position: relative;
+    /*height: 100vh;*/
+    margin: 0;
+    padding: 0;
+  }
   #logo{
     background-image: url(images/logo.png);
     background-size: cover;
@@ -21,11 +27,12 @@
     display: block;
     margin:0 auto;
   }
-
-  .container{
-    margin-top:100px;
-    /*margin-top:calc(100vh - 768px);*/
+  @media screen and (max-width: 512px) {
+    .container{
+      margin-top: calc( (100vh - 100vw) /2 );
+    }
   }
+
 
   .container .slogan{
     text-align: center;
