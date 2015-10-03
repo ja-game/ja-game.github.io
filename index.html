@@ -22,7 +22,13 @@
     height: 512px;
     text-indent: -9999px;
   }
+  #logo-click-wrapper:active #img-logo{
+    /*transform:matrix(0,1.611,1.611,0.278,5,5);*/
+    transform: skew(60deg, 60deg);
+    /*transform: rotateY(180deg);*/
+  }
   #img-logo{
+    transition-duration: 2.5s;
     max-width: 512px;
     width: 100%;
     display: block;
@@ -52,7 +58,9 @@
 <body>
   <div class="container">
     <!-- <h1 id="logo">渣</h1> -->
-    <img id="img-logo" src="images/logo.png" />
+    <div id="logo-click-wrapper">
+      <img id="img-logo" src="images/logo.png" />
+    </div>
     <h2 class="slogan">We making shit games</h2>
   </div>
 </body>
